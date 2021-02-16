@@ -1,0 +1,15 @@
+"use strict";
+exports.__esModule = true;
+var mobile_1 = require("./mobile");
+var mobile_2 = require("./mobile");
+var Nokia3210 = new mobile_1.Mobile("Nokia3210", "nokia3210", "nokia", 2, "blue", false, 0, 120);
+var iPhone3G = new mobile_1.Mobile("iPhone3G", "iPhone3G", "apple", 32, "silver", false, 1, 240);
+var SamsungGalaxy10 = new mobile_1.Mobile("SamsungGalaxy10", "galaxy10", "samsung", 64, "black", true, 3, 360);
+// console.log (Nokia3210,iPhone3G,SamsungGalaxy10);
+// Nokia3210.setIs5G(true);
+// Nokia3210.setCameraNumber(4);
+// console.log (Nokia3210,iPhone3G,SamsungGalaxy10);
+// Nokia3210.printMob();
+var mobileS = new mobile_2.AgenMob();
+mobileS.setStock([Nokia3210, iPhone3G, SamsungGalaxy10]);
+mobileS.printAgenMob();
