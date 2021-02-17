@@ -15,14 +15,6 @@ export class MobileLibrary
         this.totalPrice = this.totalPriceCalculation();
     }
 
-    public printAgenMob ()
-    {
-        for (let i = 0; i<this.mobiles.length; i++)
-        {
-           this.mobiles[i].printMob();
-        }
-    }
-
     public setName (name:string)
     {
         this.name = name;
@@ -63,7 +55,7 @@ export class MobileLibrary
         return this.totalPrice;
     }
 
-    public totalPriceCalculation()
+    private totalPriceCalculation()
     {
         let total:number = 0;
         for (let i = 0; i<this.mobiles.length; i++)
@@ -73,12 +65,13 @@ export class MobileLibrary
         return total;
     }
 
-        public printMobileLibrary ()
+    public printMobileLibrary ()
     {
         for (let i = 0; i<this.mobiles.length; i++)
         {
-           this.mobiles[i].printMob();
+            console.log (this.mobiles[i].printMob())
         }
+            console.log(`· "Price overall: ${this.totalPrice}"`);
     }
 
 }
